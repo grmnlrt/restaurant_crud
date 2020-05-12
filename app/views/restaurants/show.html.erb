@@ -1,0 +1,12 @@
+<h1><%= @restaurant.name %></h1>
+
+<h3>Details</h3>
+<ul>
+  <li>Rating: <%= "⭐️" * @restaurant.stars %></li>
+  <li>Address: <%= @restaurant.address %></li>
+</ul>
+
+<%= link_to "Update restaurant", edit_restaurant_path(@restaurant) %>
+<%= link_to "Destroy restaurant", restaurant_path(@restaurant), method: "delete", data: { confirm: "Are you sure?"} %>
+<hr>
+<%= link_to "Go back to restaurants list", restaurants_path %>
